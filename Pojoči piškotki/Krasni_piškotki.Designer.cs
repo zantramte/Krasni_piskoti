@@ -29,8 +29,6 @@ namespace Pojoči_piškotki
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.Casovnik = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -41,20 +39,13 @@ namespace Pojoči_piškotki
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Casovnik
-            // 
-            this.Casovnik.Interval = 750;
-            this.Casovnik.Tick += new System.EventHandler(this.Casovnik_Tick);
             // 
             // panel1
             // 
@@ -96,10 +87,11 @@ namespace Pojoči_piškotki
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::Pojoči_piškotki.Properties.Resources.image__7_;
+            this.pictureBox4.BackgroundImage = global::Pojoči_piškotki.Properties.Resources.image__7_;
+            this.pictureBox4.Enabled = false;
             this.pictureBox4.Location = new System.Drawing.Point(393, 349);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(156, 161);
+            this.pictureBox4.Size = new System.Drawing.Size(152, 161);
             this.pictureBox4.TabIndex = 6;
             this.pictureBox4.TabStop = false;
             this.pictureBox4.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
@@ -110,7 +102,7 @@ namespace Pojoči_piškotki
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Gadugi", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(636, 263);
+            this.label3.Location = new System.Drawing.Point(645, 263);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 44);
             this.label3.TabIndex = 5;
@@ -118,10 +110,11 @@ namespace Pojoči_piškotki
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::Pojoči_piškotki.Properties.Resources.image__7_;
-            this.pictureBox3.Location = new System.Drawing.Point(582, 310);
+            this.pictureBox3.BackgroundImage = global::Pojoči_piškotki.Properties.Resources.image__7_;
+            this.pictureBox3.Enabled = false;
+            this.pictureBox3.Location = new System.Drawing.Point(591, 310);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(159, 161);
+            this.pictureBox3.Size = new System.Drawing.Size(150, 161);
             this.pictureBox3.TabIndex = 4;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
@@ -140,10 +133,11 @@ namespace Pojoči_piškotki
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::Pojoči_piškotki.Properties.Resources.image__7_;
+            this.pictureBox2.BackgroundImage = global::Pojoči_piškotki.Properties.Resources.image__7_;
+            this.pictureBox2.Enabled = false;
             this.pictureBox2.Location = new System.Drawing.Point(204, 333);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(159, 161);
+            this.pictureBox2.Size = new System.Drawing.Size(152, 161);
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
@@ -162,10 +156,11 @@ namespace Pojoči_piškotki
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Pojoči_piškotki.Properties.Resources.image__7_;
+            this.pictureBox1.BackgroundImage = global::Pojoči_piškotki.Properties.Resources.image__7_;
+            this.pictureBox1.Enabled = false;
             this.pictureBox1.Location = new System.Drawing.Point(13, 310);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(159, 161);
+            this.pictureBox1.Size = new System.Drawing.Size(153, 161);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
@@ -183,7 +178,6 @@ namespace Pojoči_piškotki
             this.Name = "Krasni_piškotki";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Krasni piškotki - Igrica";
-            this.Load += new System.EventHandler(this.Krasni_piškotki_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -191,7 +185,6 @@ namespace Pojoči_piškotki
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -207,8 +200,6 @@ namespace Pojoči_piškotki
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Timer Casovnik;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.BindingSource bindingSource1;
     }
 }

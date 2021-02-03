@@ -14,15 +14,17 @@ namespace Pojoči_piškotki
     {
         public static int Trenutni_glasek { get; set; }
 
-        private static Random Nakljucni_glasek = new Random();
+        public static Random Nakljucni_glasek = new Random();
 
-        private static int Sedajsnji_glas { get; set; }
+        public static int Sedajsnji_glas { get; set; }
 
         public static int Moj_Glas { get; set; }
 
-        public static int stevec = 4;
+        public static int stevec = 3, stopnja = 0;
 
-        private static List<int> Stevilke = new List<int>()
+        private static int index = 0;
+
+        public static List<int> Stevilke = new List<int>()
         {
             1, 2, 3, 4
         };
@@ -41,6 +43,30 @@ namespace Pojoči_piškotki
             for (int indeks = 0; indeks < stevec; indeks++)
             {
                 Serija_glasov.Add(Nakljucni_glasek.Next(1, 4));
+            }
+        }
+
+        public static bool Preveri()
+        {
+            if (Serija_glasov[index] == Moj_Glas)
+            {
+                index++;
+            }
+
+            if (index == Serija_glasov.Count - 1)
+            {
+                stevec++;
+
+                index = 0;
+
+                return true;
+            }
+
+            else
+            {
+                index = 0;
+
+                return false;
             }
         }
     }

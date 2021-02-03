@@ -24,10 +24,6 @@ namespace Pojoči_piškotki
             Krasni_piškotki igrica = new Krasni_piškotki();
 
             igrica.Show();
-
-            MessageBox.Show("POZDRAVLJEN/A! Igrajmo se igrico ponovitev!", "Piškotki sporočajo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
         }
 
         private void button1_MouseEnter(object sender, EventArgs e)
